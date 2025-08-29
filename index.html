@@ -1,187 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="lodgo.png" type="image">
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-    <title>Video Pembelajaran Kelas Virtual</title>
-    <title>Kelas D angkatan 2024</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Pembelajaran Kelas Virtual — Kelas D 2024</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Small inline CSS: navbar glass + body padding to avoid overlap -->
+  <style>
+    /* glass navbar */
+    .navbar-glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* beri ruang supaya navbar fixed-top tidak menutupi konten.
+       Sesuaikan 80px kalau tinggi navbar berbeda */
+    body {
+      padding-top: 88px;
+    }
+
+    /* pastikan card column tetap fleksibel saat kita toggle d-none */
+    .matkul {
+      /* tidak perlu set display di sini — bootstrap col & d-flex yang mengatur */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card-wrapper">
-            <div class="row justify-content-center">
 
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="tax.png" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">PERPAJAKAN 2</h5>
-                            <p class="card-text flex-grow-1">
-                                Eva Maria Sulastri, S.E., M.M.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-4 (Pertemuan Dimulai jam 18:30)
-                            </p>
-                            <a href="https://us05web.zoom.us/j/86100066208?pwd=LFHylxU3As32jZmJkYquQsFI3rB7e4.1" class="btn btn-primary mt-auto">Masuk ZOOM</a>
-                        </div>
-                    </div>
-                </div>
+  <!-- NAVBAR (fixed-top + glass effect) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-glass shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="" width="40" height="40" class="me-2">
+        D' Accounting
+      </a>
 
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="etika.jpg" class="card-img-top" alt="banner etika">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">ETIKA BISNIS</h5>
-                            <p class="card-text flex-grow-1">
-                                DR. Suparno, Drs,. M.M., MBA.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-4
-                            </p>
-                            <a href="etika4/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="risk.jpg" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">RISK MANAGEMENT </h5>
-                            <p class="card-text flex-grow-1">
-                                Venni Avionita, S.E., M.Ak.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-4 
-                            </p>
-                            <a href="risk4/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="AI.jpg" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">ARTIFICIAL INTELIGENCE DAN DATA ANALYTICS </h5>
-                            <p class="card-text flex-grow-1">
-                                Dadang Yusup, ST., M.Kom.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-4 
-                            </p>
-                            <a href="ai4/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="etika.jpg" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">ETIKA BISNIS</h5>
-                            <p class="card-text flex-grow-1">
-                                DR. Suparno, Drs,. M.M., MBA.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-3
-                            </p>
-                            <a href="etika3/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="tax.png" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">PERPAJAKAN 2</h5>
-                            <p class="card-text flex-grow-1">
-                                Eva Maria Sulastri, S.E., M.M.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-3
-                            </p>
-                            <a href="tax3/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="AI.jpg" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">ARTIFICIAL INTELIGENCE DAN DATA ANALYTICS </h5>
-                            <p class="card-text flex-grow-1">
-                                Dadang Yusup, ST., M.Kom.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-3
-                            </p>
-                            <a href="ai3/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="etika.jpg" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">ETIKA BISNIS</h5>
-                            <p class="card-text flex-grow-1">
-                                DR. Suparno, Drs,. M.M., MBA.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-2
-                            </p>
-                            <a href="etika2/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="tax.png" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">PERPAJAKAN 2</h5>
-                            <p class="card-text flex-grow-1">
-                                Eva Maria Sulastri, S.E., M.M.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-2
-                            </p>
-                            <a href="tax2/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-lg-5 d-flex"> <!-- Lebar lebih besar -->
-                    <div class="card flex-fill">
-                        <img src="AI.jpg" class="card-img-top" alt="...">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">ARTIFICIAL INTELIGENCE DAN DATA ANALYTICS </h5>
-                            <p class="card-text flex-grow-1">
-                                Dadang Yusup, ST., M.Kom.
-                            </p>
-                            <p class="card-text flex-grow-1">
-                                Pertemuan Ke-2
-                            </p>
-                            <a href="ai2/" class="btn btn-primary mt-auto">Lihat Video</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-          
+      <div class="dropdown ms-3">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMatkul" data-bs-toggle="dropdown" aria-expanded="false">
+          Pilih Mata Kuliah
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMatkul">
+          <li><a class="dropdown-item" href="#" data-matkul="all">Semua Mata Kuliah</a></li>
+          <li><a class="dropdown-item" href="#" data-matkul="tax">TAXATION 2</a></li>
+          <li><a class="dropdown-item" href="#" data-matkul="etika">ETIKA BISNIS</a></li>
+          <li><a class="dropdown-item" href="#" data-matkul="ai">AI dan ANALISIS DATA</a></li>
+          <li><a class="dropdown-item" href="#" data-matkul="risk">RISK MANAGEMENT</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="card-wrapper">
+      <div class="row justify-content-center">
+
+        <!-- TAX -->
+        <div class="mb-4 matkul tax col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="tax.png" class="card-img-top" alt="tax">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">PERPAJAKAN 2</h5>
+              <p class="card-text flex-grow-1">Eva Maria Sulastri, S.E., M.M.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-4 (Pertemuan Dimulai jam 18:30)</p>
+              <a href="https://us05web.zoom.us/j/86100066208?pwd=LFHylxU3As32jZmJkYquQsFI3rB7e4.1" class="btn btn-primary mt-auto">Masuk ZOOM</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETIKA -->
+        <div class="mb-4 matkul etika col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="etika.jpg" class="card-img-top" alt="etika">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ETIKA BISNIS</h5>
+              <p class="card-text flex-grow-1">DR. Suparno, Drs., M.M., MBA.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-4</p>
+              <a href="etika4/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RISK -->
+        <div class="mb-4 matkul risk col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="risk.jpg" class="card-img-top" alt="risk">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">RISK MANAGEMENT</h5>
+              <p class="card-text flex-grow-1">Venni Avionita, S.E., M.Ak.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-4</p>
+              <a href="risk4/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div class="mb-4 matkul ai col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="AI.jpg" class="card-img-top" alt="ai">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ARTIFICIAL INTELLIGENCE DAN DATA ANALYTICS</h5>
+              <p class="card-text flex-grow-1">Dadang Yusup, ST., M.Kom.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-4</p>
+              <a href="ai4/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETIKA -->
+        <div class="mb-4 matkul etika col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="etika.jpg" class="card-img-top" alt="etika">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ETIKA BISNIS</h5>
+              <p class="card-text flex-grow-1">DR. Suparno, Drs., M.M., MBA.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-3</p>
+              <a href="etika3/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAX -->
+        <div class="mb-4 matkul tax col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="tax.png" class="card-img-top" alt="tax">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">PERPAJAKAN 2</h5>
+              <p class="card-text flex-grow-1">Eva Maria Sulastri, S.E., M.M.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-3</p>
+              <a href="tax3/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div class="mb-4 matkul ai col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="AI.jpg" class="card-img-top" alt="ai">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ARTIFICIAL INTELLIGENCE DAN DATA ANALYTICS</h5>
+              <p class="card-text flex-grow-1">Dadang Yusup, ST., M.Kom.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-3</p>
+              <a href="ai3/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETIKA -->
+        <div class="mb-4 matkul etika col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="etika.jpg" class="card-img-top" alt="etika">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ETIKA BISNIS</h5>
+              <p class="card-text flex-grow-1">DR. Suparno, Drs., M.M., MBA.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-2</p>
+              <a href="etika2/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAX -->
+        <div class="mb-4 matkul tax col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="tax.png" class="card-img-top" alt="tax">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">PERPAJAKAN 2</h5>
+              <p class="card-text flex-grow-1">Eva Maria Sulastri, S.E., M.M.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-2</p>
+              <a href="tax2/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div class="mb-4 matkul ai col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="AI.jpg" class="card-img-top" alt="ai">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ARTIFICIAL INTELLIGENCE DAN DATA ANALYTICS</h5>
+              <p class="card-text flex-grow-1">Dadang Yusup, ST., M.Kom.</p>
+              <p class="card-text flex-grow-1">Pertemuan Ke-2</p>
+              <a href="ai2/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div> <!-- row -->
+    </div> <!-- card-wrapper -->
+  </div> <!-- container -->
+
+  <!-- Bootstrap Bundle (JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Inline script: attach click listeners & filter logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // attach click handler to every dropdown item that has data-matkul
+      document.querySelectorAll('.dropdown-item[data-matkul]').forEach(function (item) {
+        item.addEventListener('click', function (evt) {
+          evt.preventDefault();
+          const matkul = (this.dataset.matkul || '').toLowerCase();
+          filterMatkul(matkul);
+
+          // close dropdown (Bootstrap)
+          const parentDropdown = this.closest('.dropdown');
+          if (parentDropdown) {
+            const toggle = parentDropdown.querySelector('[data-bs-toggle="dropdown"]');
+            if (toggle) {
+              const bsInstance = bootstrap.Dropdown.getOrCreateInstance(toggle);
+              bsInstance.hide();
+            }
+          }
+        });
+      });
+    });
+
+    function filterMatkul(matkul) {
+      const all = document.querySelectorAll('.matkul');
+      if (matkul === 'all' || !matkul) {
+        all.forEach(el => el.classList.remove('d-none'));
+        console.log('Menampilkan semua matkul');
+        return;
+      }
+
+      all.forEach(el => {
+        // jika elemen punya kelas matkul yang dipilih -> tampilkan, selain itu sembunyikan
+        if (el.classList.contains(matkul)) {
+          el.classList.remove('d-none');
+        } else {
+          el.classList.add('d-none');
+        }
+      });
+      console.log('Filter matkul:', matkul);
+    }
+  </script>
 </body>
 </html>

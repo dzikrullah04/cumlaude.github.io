@@ -73,3 +73,8 @@ button:hover {
       margin-bottom: 25px;
     }
   }
+  .navbar {
+  background: rgba(255, 255, 255, 0.7); /* putih transparan */
+  backdrop-filter: blur(10px);          /* efek blur */
+  -webkit-backdrop-filter: blur(10px);  /* untuk Safari */
+}
