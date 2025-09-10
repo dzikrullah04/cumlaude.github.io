@@ -6,6 +6,9 @@
     <title>Rekap Pertemuan Kuliah</title>
     <link rel="icon" href="../logo.png">
 
+    <!-- Tambahkan CDN Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +21,6 @@
 
         .container {
             width: 80%;
-            /* max-width: 800px; */
             background: white;
             padding: 20px;
             margin: 20px;
@@ -72,6 +74,29 @@
             font-weight: bold;
             color: #2c3e50;
         }
+
+        /* Style untuk file tugas */
+        .file-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .file-link i {
+            font-size: 22px;
+            color: #2b579a; /* Warna khas Word */
+        }
+
+        .file-link a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .file-link a:hover {
+            color: #0078d7;
+        }
     </style>
 </head>
 <body>
@@ -81,35 +106,46 @@
         <h2 id="pertemuan">....</h2>
 
         <div class="video-container">
-            <!-- Ganti link src sesuai link embed Google Drive -->
-            <iframe id="videoZoom" src="https://drive.google.com/file/d/1C92sRZL98kHhPHHUiKFPudf9Ki_JZVR3/preview" allowfullscreen></iframe>
+            <iframe id="videoZoom" src="" allowfullscreen></iframe>
         </div>
 
         <div class="rekap">
             <p><span class="label">Dosen:</span> <span id="namaDosen">....</span></p>
             <p><span class="label">Tanggal Pertemuan:</span> <span id="tanggal">...</span></p>
-            <p><span class="label">Tugas:</span> <span id="tugas">...</span></p>
+            <p>
+                <span class="label">Tugas:</span>
+                <span id="tugas">...</span>
+            </p>
         </div>
     </div>
 
     <script>
-        // Data pertemuan bisa diubah lewat JavaScript
+        // Data pertemuan
         const dataPertemuan = {
             namaMatkul: "PERPAJAKAN 2 ",
             pertemuan: "Pertemuan 6",
-            videoURL: "https://drive.google.com/file/d/1sppeI4V3KI7UnrcDsmnlDVFHhPOJbVCu/preview", // Ganti ID_FILE dengan ID Google Drive
+            videoURL: "https://drive.google.com/file/d/1sppeI4V3KI7UnrcDsmnlDVFHhPOJbVCu/preview",
             namaDosen: "Eva Maria Sulastri, S.E., M.M.",
-            tugas: "-",
+            tugas: "Praktikum PPN.docx",
+            linkTugas: "https://docs.google.com/document/d/1XvjIghN00440-Jgmmo2PAF3LGru9xxBw/edit?usp=sharing&ouid=108010377845687525453&rtpof=true&sd=true", // Link file tugas
             tanggal: "10 September 2025"
         };
 
-        // Menampilkan data ke elemen HTML
+        // Menampilkan data
         document.getElementById("namaMatkul").textContent = dataPertemuan.namaMatkul;
         document.getElementById("pertemuan").textContent = dataPertemuan.pertemuan;
         document.getElementById("videoZoom").src = dataPertemuan.videoURL;
         document.getElementById("namaDosen").textContent = dataPertemuan.namaDosen;
-        document.getElementById("tugas").textContent = dataPertemuan.tugas;
         document.getElementById("tanggal").textContent = dataPertemuan.tanggal;
+
+        // Tambahkan ikon + link file di bagian tugas
+        const tugasEl = document.getElementById("tugas");
+        tugasEl.innerHTML = `
+            <div class="file-link">
+                <i class="fa-solid fa-file-word"></i>
+                <a href="${dataPertemuan.linkTugas}" target="_blank">${dataPertemuan.tugas}</a>
+            </div>
+        `;
     </script>
 
 </body>
