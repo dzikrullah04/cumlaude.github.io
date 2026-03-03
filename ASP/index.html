@@ -17,6 +17,7 @@
 
         .container {
             width: 80%;
+            /* max-width: 800px; */
             background: white;
             padding: 20px;
             margin: 20px;
@@ -70,49 +71,36 @@
             font-weight: bold;
             color: #2c3e50;
         }
-
-        .logo {
-            height: 20px;
-            vertical-align: middle;
-            margin: 0 5px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 id="namaMatkul">ARTIFICIAL INTELIGENCE DAN DATA ANALYTICS </h1>
-        <h2 id="pertemuan">...</h2>
+        <h1 id="namaMatkul">INTERMEDIATE FINANCIAL ACCOUNTING II </h1>
+        <h2 id="pertemuan">19 Februari 2026</h2>
 
         <div class="video-container">
             <!-- Ganti link src sesuai link embed Google Drive -->
-            <iframe id="videoZoom" src="https://drive.google.com/file/d/1SSVl-Hvgms9r8jeunsQygXhs70_pHkLe/preview" allowfullscreen></iframe>
+            <iframe id="videoZoom" src="https://drive.google.com/file/d/1C92sRZL98kHhPHHUiKFPudf9Ki_JZVR3/preview" allowfullscreen></iframe>
         </div>
 
         <div class="rekap">
             <p><span class="label">Dosen:</span> <span id="namaDosen">....</span></p>
-            <p><span class="label">Tanggal Pertemuan:</span> <span id="tanggal">...</span></p>
+            <p><span class="label">Tanggal Pertemuan:</span> <span id="tanggal">....</span></p>
             <p><span class="label">Tugas:</span> <span id="tugas">....</span></p>
         </div>
     </div>
+    
+
     <script>
         // Data pertemuan bisa diubah lewat JavaScript
         const dataPertemuan = {
-            namaMatkul: "ARTIFICIAL INTELIGENCE DAN DATA ANALYTICS ",
-            pertemuan: "Pertemuan ...",
-            videoURL: "https://drive.google.com/file/d/1GZPhTjEHIjU_8EJxJ8B9DgJYadYy890K/preview",
-            namaDosen: "Dadang Yusup, ST., M.Kom.",
-            tugas: '-'
-            tanggal: "21 Oktober 2025"
+            namaMatkul: "INTERMEDIATE FINANCIAL ACCOUNTING II ",
+            pertemuan: "Pertemuan 3",
+            videoURL: "https://drive.google.com/file/d/133HOxDuplIogR_s5FSHv2Vxc3QMkqvdY/preview", // Ganti ID_FILE dengan ID Google Drive
+            namaDosen: "Widya Febryari Anita, S.E., M.AK, Ak,CA.",
+            tugas: "-",
+            tanggal: "19 Februari 2026"
         };
 
         // Menampilkan data ke elemen HTML
@@ -120,8 +108,8 @@
         document.getElementById("pertemuan").textContent = dataPertemuan.pertemuan;
         document.getElementById("videoZoom").src = dataPertemuan.videoURL;
         document.getElementById("namaDosen").textContent = dataPertemuan.namaDosen;
+        document.getElementById("tugas").textContent = dataPertemuan.tugas;
         document.getElementById("tanggal").textContent = dataPertemuan.tanggal;
-        document.getElementById("tugas").innerHTML = dataPertemuan.tugas;
     </script>
 
 </body>
