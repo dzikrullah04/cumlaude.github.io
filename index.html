@@ -50,8 +50,8 @@
           <li><a class="dropdown-item" href="#" data-matkul="all">Semua Mata Kuliah</a></li>
           <li><a class="dropdown-item" href="#" data-matkul="akm2">INTERMEDIATE FINANCIAL ACCOUNTING II</a></li>
           <li><a class="dropdown-item" href="#" data-matkul="asp">ANALISIS SEKURITAS DAN PORTOFOLIO</a></li>
-          <li><a class="dropdown-item" href="#" data-matkul="ai">AI dan ANALISIS DATA</a></li>
-          <li><a class="dropdown-item" href="#" data-matkul="risk">RISK MANAGEMENT</a></li>
+          <li><a class="dropdown-item" href="#" data-matkul="akmen">MANAGEMENT ACCOUNTING</a></li>
+          <li><a class="dropdown-item" href="#" data-matkul="abcd">FINAL PROJECT ABCD</a></li>
           <li><a class="dropdown-item" href="#" data-matkul="akm">AKT KEUANGAN MENENGAH 1</a></li>
           <li><a class="dropdown-item" href="#" data-matkul="mankeu">MANAJEMEN KEUANGAN</a></li>
         </ul>
@@ -65,13 +65,13 @@
       <div class="row justify-content-center">
 
         <!-- AKM2 -->
-        <div class="mb-4 matkul ai col-md-8 col-lg-5 d-flex">
+        <div class="mb-4 matkul akm2 col-md-8 col-lg-5 d-flex">
           <div class="card flex-fill">
             <img src="akm.svg" class="card-img-top" alt="akm2">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">INTERMEDIATE FINANCIAL ACCOUNTING II</h5>
               <p class="card-text flex-grow-1">Widya Febryari Anita, S.E., M.AK, Ak,CA..</p>
-              <p class="card-text flex-grow-1">19 Februari 2026</p>
+              <p class="card-text flex-grow-1">Pertemuan 2</p>
               <a href="akm/" class="btn btn-primary mt-auto">Lihat Video</a>
             </div>
           </div>
@@ -79,17 +79,61 @@
 
 
         <!-- ASP -->
-        <div class="mb-4 matkul ai col-md-8 col-lg-5 d-flex">
+        <div class="mb-4 matkul asp col-md-8 col-lg-5 d-flex">
           <div class="card flex-fill">
             <img src="ASP.svg" class="card-img-top" alt="asp">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">ANALISIS SEKURITAS DAN PORTOFOLIO</h5>
               <p class="card-text flex-grow-1">Dr. Gusganda Suria Manda, S.E., M.M</p>
-              <p class="card-text flex-grow-1">20 Februari 2026</p>
+              <p class="card-text flex-grow-1">Pertemuan 2</p>
               <a href="ASP/" class="btn btn-primary mt-auto">Lihat Video</a>
             </div>
           </div>
         </div>
+
+
+        <!-- ABCD -->
+        <div class="mb-4 matkul abcd col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="abcd.svg" class="card-img-top" alt="asp">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">FINAL PROJECT ABCD</h5>
+              <p class="card-text flex-grow-1">Arip Solehudin, S.Kom., M.Kom.</p>
+              <p class="card-text flex-grow-1">Pertemuan 3</p>
+              <a href="abcd/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- AKM2 -->
+        <div class="mb-4 matkul akm2 col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="akm.svg" class="card-img-top" alt="akm2">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">INTERMEDIATE FINANCIAL ACCOUNTING II</h5>
+              <p class="card-text flex-grow-1">Widya Febryari Anita, S.E., M.AK, Ak,CA..</p>
+              <p class="card-text flex-grow-1">Pertemuan 3</p>
+              <a href="2akm/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- AKM2 -->
+        <div class="mb-4 matkul akmen col-md-8 col-lg-5 d-flex">
+          <div class="card flex-fill">
+            <img src="akmen.svg" class="card-img-top" alt="akm2">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">MANAGEMENT ACCOUNTING</h5>
+              <p class="card-text flex-grow-1">Angga Sanita Putra, S.E., M.M.</p>
+              <p class="card-text flex-grow-1">Pertemuan 4</p>
+              <a href="akmen/" class="btn btn-primary mt-auto">Lihat Video</a>
+            </div>
+          </div>
+        </div>
+
+
 
        
 
@@ -129,7 +173,6 @@
       const all = document.querySelectorAll('.matkul');
       if (matkul === 'all' || !matkul) {
         all.forEach(el => el.classList.remove('d-none'));
-        console.log('Menampilkan semua matkul');
         return;
       }
 
