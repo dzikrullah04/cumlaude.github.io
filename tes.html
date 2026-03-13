@@ -1,0 +1,23 @@
+<button onclick="openFullscreen()">Full Screen</button>
+
+<iframe 
+    id="videoZoom" 
+    src="https://drive.google.com/file/d/1C92sRZL98kHhPHHUiKFPudf9Ki_JZVR3/preview"
+    width="600" 
+    height="400"
+    allowfullscreen>
+</iframe>
+
+<script>
+function openFullscreen() {
+    var elem = document.getElementById("videoZoom");
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { 
+        elem.webkitRequestFullscreen(); // Safari
+    } else if (elem.msRequestFullscreen) { 
+        elem.msRequestFullscreen(); // IE11
+    }
+}
+</script>
